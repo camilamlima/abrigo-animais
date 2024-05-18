@@ -1,0 +1,6 @@
+[run]
+omit = main.py
+
+[report]
+skip_covered=true
+skip_empty=true
