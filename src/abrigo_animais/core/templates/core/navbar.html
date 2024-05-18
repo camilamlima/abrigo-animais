@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary nav-base">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex">
+            <a class="navbar-brand a-white" href="">܁</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <div class="navbar-nav">
+                <a class="nav-link active a-white" aria-current="page" href="">Início</a>
+                <a class="nav-link a-white" href="">Animais para adoção</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle a-white" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Cadastros
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item"
+                                href="">Colaboradores</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="">Animais</a></li>
+                    </ul>
+                </li>
+            </div>
+            {% if request.user.is_authenticated %}
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link a-white">Olá, {{ user.username }}</a>
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Sair</button>
+                </form>
+            </div>
+            {% else %}
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link a-white" href="{% url 'social:begin' 'google-oauth2' %}">
+                    <i class="fa fa-google"></i>Login
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</nav>
