@@ -1,0 +1,62 @@
+[tool.isort]
+    case_sensitive= '1'
+    use_parentheses = '1'
+    line_length = '79'
+    order_by_type = '1'
+    multi_line_output = '3'
+    include_trailing_comma = '1'
+    lines_after_imports = '2'
+    atomic = '1'
+
+[tool.black]
+    exclude = '''
+        \.pyi
+    '''
+    target-version = ['py311']
+    line-length = '79'
+    skip-string-normalization = '1'
+
+[tool.flake8]
+    max-line-length = 200
+
+[tool.mypy]
+    ignore_missing_imports = true
+    python_version = "3.11"
+
+[[tool.mypy.overrides]]
+    module = [
+        "tests.*",
+        "*.conftest",
+        "*.migrations.*",
+    ]
+    ignore_errors = true
+    follow_imports = 'skip'
+
+[tool.poetry]
+    name = "abrigo-animais"
+    version = "0.1.0"
+    description = ""
+    authors = ["Camila Lima <camilam.oliveiralima@gmail.com>"]
+    license = "MIT"
+    readme = "README.md"
+    repository = "https://github.com/camilamlima/tcc-puc-abrigo-animais"
+    homepage = "https://github.com/camilamlima/tcc-puc-abrigo-animais"
+    packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+    python = "^3.11"
+    Django = "^5.0.6"
+    social-auth-app-django = "^5.4.1"
+    dj-database-url = "^2.1.0"
+    psycopg2-binary = "^2.9.9"
+
+[tool.poetry.group.dev.dependencies]
+    isort = "^5.13.2"
+    black = "^24.4.2"
+    mypy = "^1.10.0"
+    pyproject-flake8 = "^7.0.0"
+
+
+[build-system]
+    requires = ["poetry-core"]
+    build-backend = "poetry.core.masonry.api"
