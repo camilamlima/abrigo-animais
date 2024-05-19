@@ -12,7 +12,6 @@ class ContactModel(BaseModel):
         WHATSAPP = 'WHATSAPP', _('WhatsApp')
         OTHER = 'OTHER', _('Other')
 
-    name = models.CharField(max_length=250, verbose_name=_('Name'))
     type = models.CharField(
         max_length=20,
         choices=ContactType.choices,

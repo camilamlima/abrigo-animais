@@ -130,10 +130,6 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    'name',
-                    models.CharField(max_length=250, verbose_name='Name'),
-                ),
-                (
                     'type',
                     models.CharField(
                         choices=[

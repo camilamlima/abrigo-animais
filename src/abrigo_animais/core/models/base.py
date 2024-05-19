@@ -46,3 +46,6 @@ class BaseModel(models.Model):  # type: ignore
         if self.created_by_id is None:
             self.created_by = self.updated_by
         super().save(*args, **kwargs)
+
+    def __str__(self) -> str:
+        return f"<{self.__class__.__name__} id={self.id}>"
