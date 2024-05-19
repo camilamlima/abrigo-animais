@@ -21,3 +21,6 @@ class ShelterModel(BaseModel):
     class Meta:
         verbose_name = _('Shelter')
         verbose_name_plural = _('Shelters')
+
+    def __str__(self) -> str:
+        return f'Shelter {self.name}'

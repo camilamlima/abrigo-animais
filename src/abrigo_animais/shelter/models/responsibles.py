@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -5,6 +6,11 @@ from abrigo_animais.core.models.base import BaseModel
 
 
 class ResponsibleModel(BaseModel):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        verbose_name=_('User'),
+    )
     name = models.CharField(max_length=100, verbose_name=_('Name'))
     contacts = models.ManyToManyField(
         'core.ContactModel',

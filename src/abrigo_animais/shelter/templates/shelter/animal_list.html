@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block 'title' %}
+Animais para adoção
+{% endblock %}
+
+{% block 'main_content' %}
+
+<div class="h1-title">
+    <h1 class="text-center">Animais para adoção</h1>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for animal in object_list %}
+    <div class="col">
+        <div class="card h-100 card-all">
+            <img width="100%" src="{{ animal.photo.url }}" class="card-img-top custom-image" alt="...">
+            <a href="{% url 'shelter:detail_animal' animal.id %}" class="btn-enviar text-center">
+                Conheça {{ animal.nome }}</a>
+        </div>
+    </div>
+    {% empty %}
+    <div class="container justify-content-center">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h5 class="text-center">Não encontrado.</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+{% endblock %}
