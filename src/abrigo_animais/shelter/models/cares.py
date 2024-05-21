@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from abrigo_animais.core.models.base import BaseModel
+from abrigo_animais.core.models import BaseModel
 
 
 class CareModel(BaseModel):

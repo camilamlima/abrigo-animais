@@ -1,10 +1,15 @@
-from .animals import AdoptAnimalView, AnimalDetailView, AnimalListView
-from .shelter import ShelterHomeView
+from .adoption_animal import AdoptionAnimalView
+from .adoptions import AdoptionListView
+from .animals import AnimalDetailView, AnimalListView
+from .shelter import ShelterDetailView, ShelterHomeView, ShelterListView
 
 
 __all__ = [
-    'ShelterHomeView',
+    'AdoptionAnimalView',
+    'AdoptionListView',
     'AnimalListView',
     'AnimalDetailView',
-    'AdoptAnimalView',
+    'ShelterHomeView',
+    'ShelterListView',
+    'ShelterDetailView',
 ]
