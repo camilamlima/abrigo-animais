@@ -6,15 +6,17 @@ Animais para adoção
 
 {% block 'main_content' %}
 
+<link href="{% static 'core/css/base.css' %}" rel="stylesheet">
+
 <div class="h1-title">
     <h1 class="text-center">Animais para adoção</h1>
 </div>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for animal in object_list %}
     <div class="col">
-        <div class="card h-100 card-all">
-            <img width="100%" src="{{ animal.photo.url }}" class="card-img-top custom-image" alt="...">
-            <a href="{% url 'shelter:detail_animal' animal.id %}" class="btn-enviar text-center">
+        <div class="card h-100 card-all card-total">
+            <img width="100%" src="{{ animal.photo.url }}" class="card-img-top custom-image card-animal" alt="...">
+            <a href="{% url 'shelter:detail_animal' animal.id %}" class="btn-enviar text-center card-link">
                 Conheça {{ animal.nome }}</a>
         </div>
     </div>
@@ -23,6 +25,7 @@ Animais para adoção
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h5 class="text-center">Não encontrado.</h5>
+                <h1> Banana</h1>
             </div>
         </div>
     </div>
@@ -33,3 +36,4 @@ Animais para adoção
 
 
 {% endblock %}
+
