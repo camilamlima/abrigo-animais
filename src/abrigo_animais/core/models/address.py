@@ -19,5 +19,6 @@ class AddressModel(BaseModel):
     zip_code = models.CharField(max_length=9, verbose_name=_('Zip code'))
 
     class Meta:
+        abstract = True
         verbose_name = _('Address')
         verbose_name_plural = _('Addresses')

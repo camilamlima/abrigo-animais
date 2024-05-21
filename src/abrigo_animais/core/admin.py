@@ -58,9 +58,7 @@ class BaseAdmin(admin.ModelAdmin):  # type: ignore
         formset.save_m2m()
 
 
-class BaseInlineModelAdmin(admin.TabularInline):  # type: ignore
-    extra = 0
-
+class BaseInline:
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         defaults_fields = (
             (
@@ -70,3 +68,11 @@ class BaseInlineModelAdmin(admin.TabularInline):  # type: ignore
         )
         super().__init__(*args, **kwargs)
         _set_defaults_values_fields(self, defaults_fields)
+
+
+class BaseTabularInline(BaseInline, admin.TabularInline):  # type: ignore
+    extra = 0
+
+
+class BaseStackedInline(BaseInline, admin.StackedInline):  # type: ignore
+    extra = 0

@@ -1,12 +1,20 @@
 from django.contrib import admin
 
-from abrigo_animais.core.admin import BaseAdmin
+from abrigo_animais.core.admin import (
+    BaseAdmin,
+    BaseStackedInline,
+    BaseTabularInline,
+)
 
-from .models import AnimalModel, ResponsibleModel, ShelterModel
-
-
-class ShelterAdmin(BaseAdmin):
-    list_display = ('name',)
+from .models import (
+    AnimalModel,
+    ResponsibleAddressModel,
+    ResponsibleContactModel,
+    ResponsibleModel,
+    ShelterAddressModel,
+    ShelterContactModel,
+    ShelterModel,
+)
 
 
 class AnimalAdmin(BaseAdmin):
@@ -14,9 +22,28 @@ class AnimalAdmin(BaseAdmin):
     list_filter = ('specie', 'size')
 
 
-class ResponsibleAdmin(admin.ModelAdmin): ...  # type: ignore
+class ShelterAdmin(BaseAdmin):
+    list_display = ('name',)
+
+    class ShelterContactInline(BaseTabularInline):
+        model = ShelterContactModel
+
+    class ShelterAddressInline(BaseStackedInline):
+        model = ShelterAddressModel
+
+    inlines = (ShelterContactInline, ShelterAddressInline)
 
 
-admin.site.register(ShelterModel, ShelterAdmin)
+class ResponsibleAdmin(BaseAdmin):
+    class ResponsibleContactInline(BaseTabularInline):
+        model = ResponsibleContactModel
+
+    class ResponsibleAddressInline(BaseStackedInline):
+        model = ResponsibleAddressModel
+
+    inlines = (ResponsibleContactInline, ResponsibleAddressInline)
+
+
 admin.site.register(AnimalModel, AnimalAdmin)
+admin.site.register(ShelterModel, ShelterAdmin)
 admin.site.register(ResponsibleModel, ResponsibleAdmin)

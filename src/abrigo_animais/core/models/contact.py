@@ -21,5 +21,6 @@ class ContactModel(BaseModel):
     value = models.CharField(max_length=250, verbose_name=_('Value'))
 
     class Meta:
+        abstract = True
         verbose_name = _('Contact')
         verbose_name_plural = _('Contacts')

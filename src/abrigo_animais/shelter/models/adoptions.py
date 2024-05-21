@@ -1,10 +1,10 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from abrigo_animais.core.models.base import BaseModel
+from abrigo_animais.core.models import BaseModel
 
 
-class AdoptionModels(BaseModel):
+class AdoptionModel(BaseModel):
     class AdoptionStatus(models.TextChoices):  # type: ignore
         PENDING = 'pending', _('Pending')
         APPROVED = 'approved', _('Approved')
@@ -24,3 +24,6 @@ class AdoptionModels(BaseModel):
     class Meta:
         verbose_name = _('Adoption')
         verbose_name_plural = _('Adoptions')
+
+    def __str__(self) -> str:
+        return f'{self.animal} - {self.responsible} - {self.status}'
