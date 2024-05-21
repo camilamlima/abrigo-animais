@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-20 21:54-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/abrigo_animais/shelter/apps.py:7
+#: src/abrigo_animais/shelter/models/shelters.py:11
+#: src/abrigo_animais/shelter/models/shelters.py:22
+#: src/abrigo_animais/shelter/models/shelters.py:35
+msgid "Shelter"
+msgstr "Abrigo"
+
+#: src/abrigo_animais/shelter/models/adoptions.py:9
+msgid "Pending"
+msgstr "Pendente"
+
+#: src/abrigo_animais/shelter/models/adoptions.py:10
+msgid "Approved"
+msgstr "Aprovado"
+
+#: src/abrigo_animais/shelter/models/adoptions.py:11
+msgid "Rejected"
+msgstr "Rejeitado"
+
+#: src/abrigo_animais/shelter/models/adoptions.py:12
+msgid "Canceled"
+msgstr "Cancelado"
+
+#: src/abrigo_animais/shelter/models/adoptions.py:25
+msgid "Adoption"
+msgstr "Adoção"
+
+#: src/abrigo_animais/shelter/models/adoptions.py:26
+msgid "Adoptions"
+msgstr "Adoções"
+
+#: src/abrigo_animais/shelter/models/animals.py:9
+msgid "Dog"
+msgstr "Cachorro"
+
+#: src/abrigo_animais/shelter/models/animals.py:10
+msgid "Cat"
+msgstr "Gato"
+
+#: src/abrigo_animais/shelter/models/animals.py:11
+msgid "Bird"
+msgstr "Passaro"
+
+#: src/abrigo_animais/shelter/models/animals.py:12
+msgid "Rodent"
+msgstr "Roedor"
+
+#: src/abrigo_animais/shelter/models/animals.py:13
+#: src/abrigo_animais/shelter/models/cares.py:11
+msgid "Other"
+msgstr "Outro"
+
+#: src/abrigo_animais/shelter/models/animals.py:16
+msgid "Small"
+msgstr "Pequeno"
+
+#: src/abrigo_animais/shelter/models/animals.py:17
+msgid "Medium"
+msgstr "Medio"
+
+#: src/abrigo_animais/shelter/models/animals.py:18
+msgid "Large"
+msgstr "Grande"
+
+#: src/abrigo_animais/shelter/models/animals.py:20
+#: src/abrigo_animais/shelter/models/shelters.py:8
+msgid "Name"
+msgstr "Nome"
+
+#: src/abrigo_animais/shelter/models/animals.py:21
+msgid "Age"
+msgstr "Idade"
+
+#: src/abrigo_animais/shelter/models/animals.py:22
+msgid "Breed"
+msgstr "Raça"
+
+#: src/abrigo_animais/shelter/models/animals.py:27
+msgid "Specie"
+msgstr "Especie"
+
+#: src/abrigo_animais/shelter/models/animals.py:32
+msgid "Size"
+msgstr "Tamanho"
+
+#: src/abrigo_animais/shelter/models/animals.py:35
+msgid "Weight"
+msgstr "Peso"
+
+#: src/abrigo_animais/shelter/models/animals.py:36
+msgid "Photo"
+msgstr "Foto"
+
+#: src/abrigo_animais/shelter/models/animals.py:39
+msgid "Animal"
+msgstr "Animal"
+
+#: src/abrigo_animais/shelter/models/animals.py:40
+msgid "Animals"
+msgstr "Animais"
+
+#: src/abrigo_animais/shelter/models/cares.py:9
+msgid "Food"
+msgstr "Comida"
+
+#: src/abrigo_animais/shelter/models/cares.py:10
+msgid "Drug"
+msgstr "Remedio"
+
+#: src/abrigo_animais/shelter/models/cares.py:14
+msgid "Description"
+msgstr "Descição"
+
+#: src/abrigo_animais/shelter/models/cares.py:18
+msgid "Care type"
+msgstr "Tipo de cuidado"
+
+#: src/abrigo_animais/shelter/models/cares.py:23
+msgid "Care"
+msgstr "Cuidado"
+
+#: src/abrigo_animais/shelter/models/cares.py:24
+msgid "Cares"
+msgstr "Cuidados"
+
+#: src/abrigo_animais/shelter/models/responsibles.py:12
+msgid "User"
+msgstr "Usuario"
+
+#: src/abrigo_animais/shelter/models/responsibles.py:16
+#: src/abrigo_animais/shelter/models/responsibles.py:27
+#: src/abrigo_animais/shelter/models/responsibles.py:40
+msgid "Responsible"
+msgstr "Responsavel"
+
+#: src/abrigo_animais/shelter/models/responsibles.py:17
+msgid "Responsibles"
+msgstr "Responsaveis"
+
+#: src/abrigo_animais/shelter/models/responsibles.py:32
+msgid "Responsible Contact"
+msgstr "Contato do responsavel"
+
+#: src/abrigo_animais/shelter/models/responsibles.py:33
+msgid "Responsible Contacts"
+msgstr "Contatos do responsavel"
+
+#: src/abrigo_animais/shelter/models/responsibles.py:45
+msgid "Responsible Address"
+msgstr "Endereço do responsavel"
+
+#: src/abrigo_animais/shelter/models/responsibles.py:46
+msgid "Responsible Addresses"
+msgstr "Endereços do responsavel"
+
+#: src/abrigo_animais/shelter/models/shelters.py:12
+msgid "Shelters"
+msgstr "Abrigos"
+
+#: src/abrigo_animais/shelter/models/shelters.py:27
+msgid "Shelter Contact"
+msgstr "Contato do abrigo"
+
+#: src/abrigo_animais/shelter/models/shelters.py:28
+msgid "Shelter Contacts"
+msgstr "Contatos do abrigo"
+
+#: src/abrigo_animais/shelter/models/shelters.py:40
+msgid "Shelter Address"
+msgstr "Endereço do abrigo"
+
+#: src/abrigo_animais/shelter/models/shelters.py:41
+msgid "Shelter Addresses"
+msgstr "Endereços do abrigo"
