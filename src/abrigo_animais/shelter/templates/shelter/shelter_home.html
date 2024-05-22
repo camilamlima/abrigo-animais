@@ -1,5 +1,6 @@
 {% extends "core/base.html" %}
 {% load static %}
+{% load navbar %}
 {% block 'title' %}HOME{% endblock %}
 
 {% block 'main_content' %}
@@ -37,7 +38,9 @@
             </div>
             <h2 class="fw-normal">Animais para Adoção</h2>
             <!-- <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> -->
-            <p><a class="btn btn-secondary" href="/animais">Saiba mais &raquo;</a></p>
+            <p>
+                <!-- <a class="nav-link active" aria-current="page" href="{% url 'shelter:list_animals' %}">Animais Disponíveis</a> -->
+                <a class="btn btn-secondary" href="{% url 'shelter:list_animals' %}">Saiba mais &raquo;</a></p>
         </div>
         <div class="col-lg-4">
             <div style="width: 140px; height: 140px; background: var(--bs-secondary-color);" class="rounded-circle">
@@ -46,7 +49,7 @@
             </div>
             <h2 class="fw-normal">Parceiros</h2>
             <!-- <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p> -->
-            <p><a class="btn btn-secondary" href="/parceiros">Saiba mais &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="% url 'shelter:list_animals' %">Saiba mais &raquo;</a></p>
         </div>
         <div class="col-lg-4">
             <div style="width: 140px; height: 140px; background: var(--bs-secondary-color);" class="rounded-circle">
@@ -55,7 +58,7 @@
             </div>
             <h2 class="fw-normal">Doações</h2>
             <!-- <p>And lastly this, the third column of representative placeholder content.</p> -->
-            <p><a class="btn btn-secondary" href="/doacoes">Saiba mais &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="% url 'shelter:list_animals' %">Saiba mais &raquo;</a></p>
         </div>
     </div>
 

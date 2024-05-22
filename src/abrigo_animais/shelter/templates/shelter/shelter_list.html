@@ -6,13 +6,18 @@ Nossos abrigos
 
 {% block 'main_content' %}
 
+<link href="{% static 'core/css/base.css' %}" rel="stylesheet">
+
+
+<div class="classic-list">
 <div class="h1-title">
     <h1 class="text-center">Nossos Abrigos</h1>
 </div>
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="row row-cols-1 row-cols-md-3 g-4 card-total">
     {% for shelter in object_list %}
     <div class="col">
         <div class="card h-100 card-all">
+            <img width="100%" src="{{ shelter.animal.photo.url }}" class="card-img-top custom-image card-animal" alt="...">
             <a href="{% url 'shelter:detail_shelter' shelter.id %}" class="btn-enviar text-center">
                 Conheça {{ shelter.name }}</a>
         </div>
@@ -27,7 +32,7 @@ Nossos abrigos
     </div>
     {% endfor %}
 </div>
-
+</div>
 
 
 

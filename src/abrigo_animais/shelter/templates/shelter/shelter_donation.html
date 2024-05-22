@@ -1,25 +1,24 @@
 {% extends "core/base.html" %}
 {% load static %}
 {% block 'title' %}
-Animais para adoção
+Nossos abrigos
 {% endblock %}
+
+{% block 'main_content' %}
 
 <link href="{% static 'core/css/base.css' %}" rel="stylesheet">
 
 
-<div class="content-with-spacing">
-{% block 'main_content' %}
-
 <div class="classic-list">
-    <h1 class="text-center">Animais adotados</h1>
+<div class="h1-title">
+    <h1 class="text-center">Nossos Abrigos</h1>
 </div>
 <div class="row row-cols-1 row-cols-md-3 g-4 card-total">
-    {% for adoption in object_list %}
+    {% for shelter in object_list %}
     <div class="col">
         <div class="card h-100 card-all">
-            <img width="100%" src="{{ adoption.animal.photo.url }}" class="card-img-top custom-image card-animal" alt="...">
-            <a href="" class="btn-enviar text-center">
-                Conheça {{ adoption.animal }} e {{ adoption.responsible }}</a>
+            <a href="{% url 'shelter:detail_shelter' shelter.id %}" class="btn-enviar text-center">
+                Conheça {{ shelter.name }}</a>
         </div>
     </div>
     {% empty %}

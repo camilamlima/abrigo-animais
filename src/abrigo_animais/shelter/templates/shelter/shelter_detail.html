@@ -4,18 +4,24 @@
 Página de detalhes Abrigo
 {% endblock %}
 
+<link href="{% static 'core/css/base.css' %}" rel="stylesheet">
+
 {% block 'main_content' %}
 <div class="div-body">
+    <div class="container classic-list">
     <div class="container">
         <h1 class="text-center h1-title">Veja todos os detalhes sobre {{ object.name }}</h1>
         <div class="row justify-content-center">
+            <div class="col-4 ">
+                <img src="{{ object.photo.url }}" class="w-100 img-objects card-detail" alt="...">
+            </div>
             <div class="col-4">
                 <strong>Nome:</strong> {{ object.name }}<br>
                 
             </div>
         </div>
     </div>
-    <div class="container text-center div-button">
+    <div class="container text-center div-button ">
         <a class="btn-primary btn-lg btn-enviar" href="{% url 'shelter:shelter_donation' object.id %}" >
             Ajude o {{ object.name }}
         </a>

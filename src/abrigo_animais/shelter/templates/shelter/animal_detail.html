@@ -6,11 +6,11 @@ Página de detalhes
 
 {% block 'main_content' %}
 <div class="div-body">
-    <div class="container">
+    <div class="container classic-list">
         <h1 class="text-center h1-title">Veja todos os detalhes sobre {{ object.name }}</h1>
         <div class="row justify-content-center">
             <div class="col-4 ">
-                <img src="{{ object.photo.url }}" class="w-100 img-objects" alt="...">
+                <img src="{{ object.photo.url }}" class="w-100 img-objects card-detail" alt="...">
             </div>
             <div class="col-4">
                 <strong>Nome:</strong> {{ object.name }}<br>
@@ -22,9 +22,9 @@ Página de detalhes
             </div>
         </div>
     </div>
-    <div class="container text-center div-button">
+    <div class="container text-center div-button link-adoption">
         <a class="btn-primary btn-lg btn-enviar" href="{% url 'shelter:adoption_animal' object.id %}" >
-            Solicitar adoção de {{ object.nome }}
+            Solicitar adoção de {{ object.name }}
         </a>
     </div>
 </div>

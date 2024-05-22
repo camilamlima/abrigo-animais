@@ -6,7 +6,6 @@ from abrigo_animais.core.models import AddressModel, BaseModel, ContactModel
 
 class ShelterModel(BaseModel):
     name = models.CharField(max_length=250, verbose_name=_('Name'))
-
     class Meta:
         verbose_name = _('Shelter')
         verbose_name_plural = _('Shelters')

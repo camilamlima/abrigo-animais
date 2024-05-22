@@ -76,3 +76,4 @@ class BaseTabularInline(BaseInline, admin.TabularInline):  # type: ignore
 
 class BaseStackedInline(BaseInline, admin.StackedInline):  # type: ignore
     extra = 0
+

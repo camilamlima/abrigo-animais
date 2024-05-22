@@ -4,31 +4,53 @@
 Animais para adoção
 {% endblock %}
 
+<link href="{% static 'core/css/base.css' %}" rel="stylesheet">
+
 {% block 'main_content' %}
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
+<div class="container form-adoption">
     {{ message }}
+</div>
 
-    Animal para adoção
-    {{ animal.name }}
-    
+    <div class="container form-adoption">
+    <h3>Animal para adoção
+    {{ animal.name }}</h3>
+    </div>
+
     <form id="form-container" method="POST">
         {% csrf_token %}
 
         <h2>Contacts</h2>
         {{ contact_formset.management_form }}
         {% for form in contact_formset %}
+        <div class="form-campo"> 
             {{ form.as_p }}
+        </div>
         {% endfor %}
-
+    
         <h2>Addresses</h2>
         {{ address_formset.management_form }}
         {% for form in address_formset %}
+        <div class="form-campo"> 
             {{ form.as_p }}
+        </div>
         {% endfor %}
-
         <button type="submit">Save</button>
     </form>
+    <!-- </div> -->
 
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let contactParagraphs = document.querySelectorAll(".form-campo p");
+            contactParagraphs.forEach(function(paragraph) {
+                paragraph.classList.add("form-paragraph");
+            });
+    
+            let addressParagraphs = document.querySelectorAll(".form-campo p");
+            addressParagraphs.forEach(function(paragraph) {
+                paragraph.classList.add("form-paragraph");
+            });
+        });
+    </script>
 {% endblock %}
