@@ -3,6 +3,8 @@ from typing import Any
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
+from django.shortcuts import redirect
+from django.urls import reverse
 from django.views.generic.base import TemplateView
 
 from ..forms import ResponsibleAddressFormSet, ResponsibleContactFormSet
@@ -42,12 +44,16 @@ class AdoptionAnimalView(LoginRequiredMixin, TemplateView):  # type: ignore
             address_formset.instance = responsible
             address_formset.save()
 
-            AdoptionModel.objects.create(
+            adoption = AdoptionModel.objects.create(
                 animal=animal, responsible=responsible
             )
-
-            return self.render_to_response(
-                {'message': 'Animal adopted successfully!'}
+            return redirect(
+                reverse('shelter:detail_adoption', args=[adoption.id])
             )
 
-        return self.render_to_response({'message': 'Error adopting animal!'})
+        context = {
+            'animal': animal,
+            'contact_formset': contact_formset,
+            'address_formset': address_formset,
+        }
+        return self.render_to_response(context)
