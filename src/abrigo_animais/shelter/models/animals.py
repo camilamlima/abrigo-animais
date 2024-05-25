@@ -17,6 +17,9 @@ class AnimalModel(BaseModel):
         MEDIUM = 'MEDIUM', _('Medium')
         LARGE = 'LARGE', _('Large')
 
+    shelter = models.ForeignKey(
+        'shelter.ShelterModel', on_delete=models.CASCADE
+    )
     name = models.CharField(max_length=250, verbose_name=_('Name'))
     age = models.IntegerField(verbose_name=_('Age'))
     breed = models.CharField(max_length=250, verbose_name=_('Breed'))

@@ -7,7 +7,7 @@ from ..models import AnimalModel
 
 
 class AnimalListView(ListView):  # type: ignore
-    model = AnimalModel
+    queryset = AnimalModel.objects.filter(adoptionmodel__isnull=True)
     template_name = "shelter/animal_list.html"
     paginate_by = 10
 
