@@ -1,5 +1,6 @@
 from typing import Any
 
+from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.views.generic.base import TemplateView
@@ -8,7 +9,9 @@ from ..forms import ResponsibleAddressFormSet, ResponsibleContactFormSet
 from ..models import AdoptionModel, AnimalModel, ResponsibleModel
 
 
-class AdoptionAnimalView(TemplateView, LoginRequiredMixin):  # type: ignore
+class AdoptionAnimalView(LoginRequiredMixin, TemplateView):  # type: ignore
+    login_url = settings.LOGIN_URL
+    redirect_field_name = "redirect_to"
     template_name = "shelter/adoption_animal.html"
 
     def get(

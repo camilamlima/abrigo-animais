@@ -5,8 +5,9 @@ from .views import (
     AdoptionListView,
     AnimalDetailView,
     AnimalListView,
+    PartnerDetailView,
+    PartnerListView,
     ShelterDetailView,
-    ShelterDonationView,
     ShelterHomeView,
     ShelterListView,
 )
@@ -16,7 +17,7 @@ app_name = 'shelter'
 
 urlpatterns = [
     path('', ShelterHomeView.as_view(), name='home'),
-    path('adocoes/', AdoptionListView.as_view(), name="list_adoption"),
+    path('adocoes/', AdoptionListView.as_view(), name="list_adoptions"),
     path('animais/', AnimalListView.as_view(), name="list_animals"),
     path(
         'animais/<uuid:id>', AnimalDetailView.as_view(), name="detail_animal"
@@ -31,8 +32,13 @@ urlpatterns = [
         'abrigos/<uuid:id>', ShelterDetailView.as_view(), name="detail_shelter"
     ),
     path(
-        'abrigos/<uuid:id>/doacoes',
-        ShelterDonationView.as_view(),
-        name="shelter_donation",
+        'parceiros/',
+        PartnerListView.as_view(),
+        name="list_partners",
+    ),
+    path(
+        'parceiros/<uuid:id>',
+        PartnerDetailView.as_view(),
+        name="detail_partner",
     ),
 ]
