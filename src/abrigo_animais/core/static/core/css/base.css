@@ -160,26 +160,31 @@ a.a-white {
 /* Padding adicional para a navbar */
 .navbar {
   padding: 1.5rem 1rem; /* Ajuste os valores conforme necessário */
+  background-color: lavender !important;
 }
 
 .navbar-brand, .nav-link {
   margin-right: 1.5rem; /* Espaçamento entre os links */
+  background-color: lavender;
 }
 
 /* Ajustar a cor dos links para azul claro */
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-brand {
   color: rgba(173, 216, 230, 0.75) !important; /* Azul claro levemente transparente */
+  background-color: lavender;
+  padding-left: 20px;
 }
 
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-brand:hover {
   color: #ADD8E6 !important; /* Azul claro */ 
+  background-color: lavender
 }
 
 .site-footer {
-  background-color: #f8f9fa;
+  background-color: lavender;
   padding: 60px 0;
 }
 .site-footer .icon {

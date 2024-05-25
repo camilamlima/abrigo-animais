@@ -17,7 +17,7 @@ Nossos abrigos
     {% for shelter in object_list %}
     <div class="col">
         <div class="card h-100 card-all">
-            <a href="{% url 'shelter:detail_shelter' shelter.id %}" class="btn-enviar text-center">
+            <a href="{% url 'shelter:detail_shelter' shelter.id %}" class="btn-enviar text-center card-link">
                 Conheça {{ shelter.name }}</a>
         </div>
     </div>
