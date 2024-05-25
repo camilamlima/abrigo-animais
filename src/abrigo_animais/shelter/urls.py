@@ -6,6 +6,7 @@ from .views import (
     AnimalDetailView,
     AnimalListView,
     ShelterDetailView,
+    ShelterDonationView,
     ShelterHomeView,
     ShelterListView,
 )
@@ -31,7 +32,7 @@ urlpatterns = [
     ),
     path(
         'abrigos/<uuid:id>/doacoes',
-        AdoptionAnimalView.as_view(),
+        ShelterDonationView.as_view(),
         name="shelter_donation",
     ),
 ]

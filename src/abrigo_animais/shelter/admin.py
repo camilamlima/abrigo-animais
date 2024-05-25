@@ -8,6 +8,7 @@ from abrigo_animais.core.admin import (
 
 from .models import (
     AnimalModel,
+    CareModel,
     ResponsibleAddressModel,
     ResponsibleContactModel,
     ResponsibleModel,
@@ -20,6 +21,11 @@ from .models import (
 class AnimalAdmin(BaseAdmin):
     list_display = ('name', 'specie', 'breed', 'size', 'weight')
     list_filter = ('specie', 'size')
+
+    class CareInline(BaseTabularInline):
+        model = CareModel
+
+    inlines = (CareInline,)
 
 
 class ShelterAdmin(BaseAdmin):

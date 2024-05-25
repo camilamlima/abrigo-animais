@@ -35,4 +35,11 @@ serve-local: ## Serve application locally
 	@echo "###\nStarting server...\n###\n"
 	@poetry run python src/manage.py runserver
 
+migrate: ## Run Django migrate
+	@poetry run src/manage.py migrate
+	
+make-messages: ## Generate .po of language of django translation
+	@poetry run src/manage.py makemessages -l pt_BR
 
+compile-messages: ## Generate .mo of language of django translation
+	@poetry run src/manage.py compilemessages

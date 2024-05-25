@@ -11,13 +11,13 @@ class CareModel(BaseModel):
         OTHER = 'OTHER', _('Other')
 
     animal = models.ForeignKey('shelter.AnimalModel', on_delete=models.CASCADE)
-    description = models.TextField(verbose_name=_('Description'))
     care_type = models.CharField(
         max_length=50,
         choices=CareType.choices,
         verbose_name=_('Care type'),
         default=CareType.OTHER,
     )
+    description = models.TextField(verbose_name=_('Description'))
 
     class Meta:
         verbose_name = _('Care')
