@@ -2,6 +2,7 @@ from django.urls import path
 
 from .views import (
     AdoptionAnimalView,
+    AdoptionDetailView,
     AdoptionListView,
     AnimalDetailView,
     AnimalListView,
@@ -18,6 +19,11 @@ app_name = 'shelter'
 urlpatterns = [
     path('', ShelterHomeView.as_view(), name='home'),
     path('adocoes/', AdoptionListView.as_view(), name="list_adoptions"),
+    path(
+        'adocoes/<uuid:id>',
+        AdoptionDetailView.as_view(),
+        name="detail_adoption",
+    ),
     path('animais/', AnimalListView.as_view(), name="list_animals"),
     path(
         'animais/<uuid:id>', AnimalDetailView.as_view(), name="detail_animal"

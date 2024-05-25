@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-20 21:54-0300\n"
+"POT-Creation-Date: 2024-05-25 14:41-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,10 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/abrigo_animais/shelter/apps.py:7
-#: src/abrigo_animais/shelter/models/shelters.py:11
-#: src/abrigo_animais/shelter/models/shelters.py:22
-#: src/abrigo_animais/shelter/models/shelters.py:35
+#: src/abrigo_animais/shelter/apps.py:8
+#: src/abrigo_animais/shelter/models/shelters.py:14
+#: src/abrigo_animais/shelter/models/shelters.py:25
+#: src/abrigo_animais/shelter/models/shelters.py:38
 msgid "Shelter"
 msgstr "Abrigo"
 
@@ -82,40 +82,42 @@ msgstr "Medio"
 msgid "Large"
 msgstr "Grande"
 
-#: src/abrigo_animais/shelter/models/animals.py:20
+#: src/abrigo_animais/shelter/models/animals.py:23
+#: src/abrigo_animais/shelter/models/partners.py:8
 #: src/abrigo_animais/shelter/models/shelters.py:8
 msgid "Name"
 msgstr "Nome"
 
-#: src/abrigo_animais/shelter/models/animals.py:21
+#: src/abrigo_animais/shelter/models/animals.py:24
 msgid "Age"
 msgstr "Idade"
 
-#: src/abrigo_animais/shelter/models/animals.py:22
+#: src/abrigo_animais/shelter/models/animals.py:25
 msgid "Breed"
 msgstr "Raça"
 
-#: src/abrigo_animais/shelter/models/animals.py:27
+#: src/abrigo_animais/shelter/models/animals.py:30
 msgid "Specie"
 msgstr "Especie"
 
-#: src/abrigo_animais/shelter/models/animals.py:32
+#: src/abrigo_animais/shelter/models/animals.py:35
 msgid "Size"
 msgstr "Tamanho"
 
-#: src/abrigo_animais/shelter/models/animals.py:35
+#: src/abrigo_animais/shelter/models/animals.py:38
 msgid "Weight"
 msgstr "Peso"
 
-#: src/abrigo_animais/shelter/models/animals.py:36
+#: src/abrigo_animais/shelter/models/animals.py:39
+#: src/abrigo_animais/shelter/models/shelters.py:11
 msgid "Photo"
 msgstr "Foto"
 
-#: src/abrigo_animais/shelter/models/animals.py:39
+#: src/abrigo_animais/shelter/models/animals.py:42
 msgid "Animal"
 msgstr "Animal"
 
-#: src/abrigo_animais/shelter/models/animals.py:40
+#: src/abrigo_animais/shelter/models/animals.py:43
 msgid "Animals"
 msgstr "Animais"
 
@@ -127,13 +129,15 @@ msgstr "Comida"
 msgid "Drug"
 msgstr "Remedio"
 
-#: src/abrigo_animais/shelter/models/cares.py:14
-msgid "Description"
-msgstr "Descição"
-
-#: src/abrigo_animais/shelter/models/cares.py:18
+#: src/abrigo_animais/shelter/models/cares.py:17
 msgid "Care type"
 msgstr "Tipo de cuidado"
+
+#: src/abrigo_animais/shelter/models/cares.py:20
+#: src/abrigo_animais/shelter/models/partners.py:10
+#: src/abrigo_animais/shelter/models/shelters.py:9
+msgid "Description"
+msgstr "Descição"
 
 #: src/abrigo_animais/shelter/models/cares.py:23
 msgid "Care"
@@ -142,6 +146,32 @@ msgstr "Cuidado"
 #: src/abrigo_animais/shelter/models/cares.py:24
 msgid "Cares"
 msgstr "Cuidados"
+
+#: src/abrigo_animais/shelter/models/partners.py:17
+#: src/abrigo_animais/shelter/models/partners.py:28
+#: src/abrigo_animais/shelter/models/partners.py:41
+msgid "Partner"
+msgstr "Parceiro"
+
+#: src/abrigo_animais/shelter/models/partners.py:18
+msgid "Partners"
+msgstr "Parceiros"
+
+#: src/abrigo_animais/shelter/models/partners.py:33
+msgid "Partner Contact"
+msgstr "Contato do parceiro"
+
+#: src/abrigo_animais/shelter/models/partners.py:34
+msgid "Partner Contacts"
+msgstr "Contatos do parceiro"
+
+#: src/abrigo_animais/shelter/models/partners.py:46
+msgid "Partner Address"
+msgstr "Endereço do parceiro"
+
+#: src/abrigo_animais/shelter/models/partners.py:47
+msgid "Partner Addresses"
+msgstr "Endereços do parceiro"
 
 #: src/abrigo_animais/shelter/models/responsibles.py:12
 msgid "User"
@@ -173,22 +203,26 @@ msgstr "Endereço do responsavel"
 msgid "Responsible Addresses"
 msgstr "Endereços do responsavel"
 
-#: src/abrigo_animais/shelter/models/shelters.py:12
+#: src/abrigo_animais/shelter/models/shelters.py:10
+msgid "Website"
+msgstr "Site"
+
+#: src/abrigo_animais/shelter/models/shelters.py:15
 msgid "Shelters"
 msgstr "Abrigos"
 
-#: src/abrigo_animais/shelter/models/shelters.py:27
+#: src/abrigo_animais/shelter/models/shelters.py:30
 msgid "Shelter Contact"
 msgstr "Contato do abrigo"
 
-#: src/abrigo_animais/shelter/models/shelters.py:28
+#: src/abrigo_animais/shelter/models/shelters.py:31
 msgid "Shelter Contacts"
 msgstr "Contatos do abrigo"
 
-#: src/abrigo_animais/shelter/models/shelters.py:40
+#: src/abrigo_animais/shelter/models/shelters.py:43
 msgid "Shelter Address"
 msgstr "Endereço do abrigo"
 
-#: src/abrigo_animais/shelter/models/shelters.py:41
+#: src/abrigo_animais/shelter/models/shelters.py:44
 msgid "Shelter Addresses"
 msgstr "Endereços do abrigo"

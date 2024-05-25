@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block 'title' %}
+Página de detalhes
+{% endblock %}
+
+{% block 'main_content' %}
+<div class="div-body">
+    <div class="container classic-list">
+        <h1 class="text-center h1-title">Veja todos os detalhes sobre {{ object }}</h1>
+        <div class="row justify-content-center">
+            <div class="col-4 ">
+                <img src="{{ object.photo.url }}" class="w-100 img-objects card-detail" alt="...">
+            </div>
+            <div class="col-4">
+                <strong>Nome:</strong> {{ object }}<br>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center div-button link-adoption">
+        <a class="btn-primary btn-lg btn-enviar" href="" >
+            Solicitar sua adoção
+        </a>
+    </div>
+</div>
+    
+{% endblock %}
