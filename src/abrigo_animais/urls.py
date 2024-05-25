@@ -12,6 +12,8 @@ from django.contrib.auth.views import LogoutView
 from django.urls import include, path
 from django.views.generic.base import RedirectView
 
+from abrigo_animais.core.views import LoginView
+
 
 urlpatterns = (
     [
@@ -20,6 +22,7 @@ urlpatterns = (
         ),
         path('admin/', admin.site.urls),
         path('logout/', LogoutView.as_view(), name='logout'),
+        path('login/', LoginView.as_view(), name='login'),
         path(
             'social-auth/',
             include('social_django.urls', namespace='social-auth'),
