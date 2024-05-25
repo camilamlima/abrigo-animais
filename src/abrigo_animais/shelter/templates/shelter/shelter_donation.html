@@ -4,9 +4,11 @@
 Página de doações para o Abrigo
 {% endblock %}
 
+<link href="{% static 'core/css/base.css' %}" rel="stylesheet">
+
 {% block 'main_content' %}
 <div class="div-body">
-    <div class="container">
+    <div class="container classic-list">
         <h1 class="text-center h1-title">Veja todos os detalhes sobre {{ object.name }}</h1>
         <div class="row justify-content-center">
             <div class="col-4">
