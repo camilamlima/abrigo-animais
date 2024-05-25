@@ -1,7 +1,7 @@
 {% extends "core/base.html" %}
 {% load static %}
 {% block 'title' %}
-Página de detalhes Abrigo
+Página de detalhes do Pareceiro
 {% endblock %}
 
 <link href="{% static 'core/css/base.css' %}" rel="stylesheet">
@@ -12,9 +12,6 @@ Página de detalhes Abrigo
     <div class="container">
         <h1 class="text-center h1-title">Veja todos os detalhes sobre {{ object.name }}</h1>
         <div class="row justify-content-center">
-            <div class="col-4 ">
-                <img src="{{ object.photo.url }}" class="w-100 img-objects card-detail" alt="...">
-            </div>
             <div class="col-4">
                 <strong>Nome:</strong> {{ object.name }}<br>
                 

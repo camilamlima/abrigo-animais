@@ -1,6 +1,7 @@
 from .adoptions import AdoptionModel
 from .animals import AnimalModel
 from .cares import CareModel
+from .partners import PartnerAddressModel, PartnerContactModel, PartnerModel
 from .responsibles import (
     ResponsibleAddressModel,
     ResponsibleContactModel,
@@ -19,4 +20,7 @@ __all__ = [
     'ResponsibleAddressModel',
     'AnimalModel',
     'CareModel',
+    'PartnerModel',
+    'PartnerContactModel',
+    'PartnerAddressModel',
 ]

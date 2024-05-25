@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block 'title' %}
+Nossos parceiros
+{% endblock %}
+
+{% block 'main_content' %}
+
+<link href="{% static 'core/css/base.css' %}" rel="stylesheet">
+
+
+<div class="classic-list">
+<div class="h1-title">
+    <h1 class="text-center">Nossos Parceiros</h1>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4 card-total">
+    {% for partner in object_list %}
+    <div class="col">
+        <div class="card h-100 card-all">
+            <a href="{% url 'shelter:detail_partner' partner.id %}" class="btn-enviar text-center card-link">
+                Conheça {{ partner.name }}</a>
+        </div>
+    </div>
+    {% empty %}
+    <div class="container justify-content-center">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h5 class="text-center">Não encontrado.</h5>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}

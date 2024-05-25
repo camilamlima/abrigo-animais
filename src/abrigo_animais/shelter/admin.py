@@ -9,6 +9,9 @@ from abrigo_animais.core.admin import (
 from .models import (
     AnimalModel,
     CareModel,
+    PartnerAddressModel,
+    PartnerContactModel,
+    PartnerModel,
     ResponsibleAddressModel,
     ResponsibleContactModel,
     ResponsibleModel,
@@ -50,6 +53,17 @@ class ResponsibleAdmin(BaseAdmin):
     inlines = (ResponsibleContactInline, ResponsibleAddressInline)
 
 
+class PartnerAdmin(BaseAdmin):
+    class PartnerContactInline(BaseTabularInline):
+        model = PartnerContactModel
+
+    class PartnerAddressInline(BaseStackedInline):
+        model = PartnerAddressModel
+
+    inlines = (PartnerContactInline, PartnerAddressInline)
+
+
 admin.site.register(AnimalModel, AnimalAdmin)
 admin.site.register(ShelterModel, ShelterAdmin)
 admin.site.register(ResponsibleModel, ResponsibleAdmin)
+admin.site.register(PartnerModel, PartnerAdmin)
