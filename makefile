@@ -3,6 +3,8 @@ IMAGE_TAG ?= latest
 
 export PYTHONPATH=$PYTHONPATH:./src
 export SOURCE_PATH=src
+export DOCKER_IMAGE_NAME=ghcr.io/camilamlima/abrigo-animais
+export IMAGE_TAG ?= latest
 
 # SET .env and override default envs
 ifneq (,$(wildcard ./.env))
@@ -43,3 +45,9 @@ make-messages: ## Generate .po of language of django translation
 
 compile-messages: ## Generate .mo of language of django translation
 	@poetry run src/manage.py compilemessages
+
+docker-build: ## Build docker image
+	@docker build -t $(DOCKER_IMAGE_NAME):$(IMAGE_TAG) .
+
+docker-compose-up: ## Run docker-compose up
+	@docker-compose up --build
