@@ -11,16 +11,20 @@ Página de detalhes do Pareceiro
     <div class="container classic-list">
         <h1 class="text-center h1-title">Veja todos os detalhes sobre {{ object.name }}</h1>
         <div class="row justify-content-center">
-            <div class="col-4">
+            <div class="col-4 card-list">
                 <strong>Nome:</strong> {{ object.name }}<br>
-                
+                <strong>Descrição:</strong> {{ object.description }}<br>
+                <strong>Abrigo Associado:</strong>
+                    <a href="{% url 'shelter:detail_shelter' object.shelter.id %}">
+                        {{ object.shelter.name }}<br>
+                    </a>
+                <strong>Contato:</strong> 
+                {% for contact in object.contacts.all %}
+                <p>Tipo de Contato: {{ contact.get_type_display }}</p>
+                <p>Dados do Contato: {{ contact.value }}</p>
+            {% endfor %}
             </div>
         </div>
-    </div>
-    <div class="container text-center div-button ">
-        <a class="btn-primary btn-lg btn-enviar" href="" >
-            Ajude o {{ object.name }}
-        </a>
     </div>
 </div>
     

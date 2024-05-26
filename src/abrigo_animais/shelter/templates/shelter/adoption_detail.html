@@ -7,21 +7,33 @@ Página de detalhes
 {% block 'main_content' %}
 <div class="div-body">
     <div class="container classic-list">
-        <h1 class="text-center h1-title">Veja todos os detalhes sobre {{ object }}</h1>
+        <h1 class="text-center h1-title">Veja todos os detalhes sobre {{ object.animal.name }} e {{ object.responsible.user}}</h1>
         <div class="row justify-content-center">
             <div class="col-4 ">
-                <img src="{{ object.photo.url }}" class="w-100 img-objects card-detail" alt="...">
+                <img src="{{ object.animal.photo.url }}" class="w-100 img-objects card-detail" alt="...">
             </div>
             <div class="col-4">
-                <strong>Nome:</strong> {{ object }}<br>
+                <strong>Responsável:</strong> {{ object.responsible.user}}<br>
+                <strong>Nome:</strong> {{ object.animal.name }}<br>
+                <strong>Idade:</strong> {{ object.animal.age }}<br>
+                <strong>Raça:</strong> {{ object.animal.breed }}<br>
+                <strong>Espécie:</strong> {{ object.animal.get_specie_display }}<br>
+                <strong>Tamanho:</strong> {{ object.animal.get_size_display }}<br>
+                <strong>Peso:</strong> {{ object.animal.weight }}<br>
+                <strong>Cuidados Especiais:</strong>
+                {% for care in object.animal.caremodel_set.all %}
+                    <p>Tipo de cuidado: {{ care.get_care_type_display }}</p>
+                    <p>Detalhes: {{ care.description }}</p>
+                {% endfor %}
+                <br>
             </div>
         </div>
     </div>
-    <div class="container text-center div-button link-adoption">
+    <!-- <div class="container text-center div-button link-adoption">
         <a class="btn-primary btn-lg btn-enviar" href="" >
             Solicitar sua adoção
         </a>
-    </div>
+    </div> -->
 </div>
     
 {% endblock %}

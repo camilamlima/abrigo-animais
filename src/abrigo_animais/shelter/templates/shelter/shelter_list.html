@@ -17,7 +17,7 @@ Nossos abrigos
     {% for shelter in object_list %}
     <div class="col">
         <div class="card h-100 card-all">
-            <img width="100%" src="{{ shelter.animal.photo.url }}" class="card-img-top custom-image card-animal" alt="...">
+            <img width="100%" src="{{ shelter.photo.url }}" class="card-img-top custom-image card-animal" alt="...">
             <a href="{% url 'shelter:detail_shelter' shelter.id %}" class="btn-enviar text-center card-link">
                 Conheça {{ shelter.name }}</a>
         </div>

@@ -19,7 +19,7 @@ Animais para adoção
         <div class="card h-100 card-all">
             <img width="100%" src="{{ adoption.animal.photo.url }}" class="card-img-top custom-image card-animal" alt="...">
             <a href="{% url 'shelter:detail_adoption' adoption.id %}" class="btn-enviar text-center card-link">
-                Conheça {{ adoption.animal }} e {{ adoption.responsible }}</a>
+                Conheça {{ adoption.animal.name }} e {{ adoption.responsible}}</a>
         </div>
     </div>
     {% empty %}

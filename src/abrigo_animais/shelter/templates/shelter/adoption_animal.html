@@ -21,7 +21,7 @@ Animais para adoção
     <form id="form-container" method="POST">
         {% csrf_token %}
 
-        <h2>Contacts</h2>
+        <h2>Contatos:</h2>
         {{ contact_formset.management_form }}
         {% for form in contact_formset %}
         <div class="form-campo"> 
@@ -29,7 +29,7 @@ Animais para adoção
         </div>
         {% endfor %}
     
-        <h2>Addresses</h2>
+        <h2>Endereço:</h2>
         {{ address_formset.management_form }}
         {% for form in address_formset %}
         <div class="form-campo"> 

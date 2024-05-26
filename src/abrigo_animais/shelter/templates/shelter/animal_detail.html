@@ -14,11 +14,17 @@ Página de detalhes
             </div>
             <div class="col-4">
                 <strong>Nome:</strong> {{ object.name }}<br>
-                <strong>Espécie:</strong> {{ object.specie }}<br>
+                <strong>Espécie:</strong> {{ object.get_specie_display }}<br>
                 <strong>Raça:</strong> {{ object.breed }}<br>
-                <strong>Peso:</strong> {{ object.weight }}<br>
-                <strong>Porte:</strong> {{ object.size }}<br>
-
+                <strong>Peso:</strong> {{ object.weight }} kg <br>
+                <strong>Porte:</strong> {{ object.get_size_display }}<br>
+                <strong>Cuidados Especiais:</strong>
+                {% for care in object.caremodel_set.all %}
+                    <p>Tipo de cuidado: {{ care.get_care_type_display }}</p>
+                    <p>Detalhes: {{ care.description }}</p>
+                {% endfor %}
+                <br>
+                <strong>Abrigo Associado:</strong> {{ object.shelter.name }}<br>
             </div>
         </div>
     </div>

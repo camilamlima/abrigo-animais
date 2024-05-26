@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
@@ -10,16 +16,17 @@ body {
   margin: 25px;
 }
 
-.principal {
+/* .principal { */
   /* padding: 5rem 0 10rem 0; */
-  background: #072e33;
+  /* background: #072e33; */
   /* margin-bottom: 80px; */
-}
+/* } */
 
 .principal h1 {
   color: #0B3B60;
   font-size: 55px;
 }
+
 .principal .intro {
   position: relative;
 }
@@ -159,11 +166,13 @@ a.a-white {
 
 /* Padding adicional para a navbar */
 .navbar {
+  color: #0B3B60 !important;
   padding: 1.5rem 1rem; /* Ajuste os valores conforme necessário */
   background-color: lavender !important;
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand, .nav-link, .nav-item {
+  color: #0B3B60 !important;
   margin-right: 1.5rem; /* Espaçamento entre os links */
   background-color: lavender;
 }
@@ -171,7 +180,7 @@ a.a-white {
 /* Ajustar a cor dos links para azul claro */
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-brand {
-  color: rgba(173, 216, 230, 0.75) !important; /* Azul claro levemente transparente */
+  color: #0B3B60 !important;
   background-color: lavender;
   padding-left: 20px;
 }
@@ -179,7 +188,7 @@ a.a-white {
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-brand:hover {
-  color: #ADD8E6 !important; /* Azul claro */ 
+  color: #0B3B60 !important; /* Azul claro */ 
   background-color: lavender
 }
 
@@ -205,26 +214,14 @@ a.a-white {
   height: 100%;
 }
 
-/* .card-total{
-  margin: 30px;
-} */
-
 .card-link{
   margin: 10px;
+  text-align: center;
 }
 
 .form-adoption{
   margin: 30px;
   text-align: center;
-}
-
-.form-campo2{
-  margin: 10px;
-  border: 7px solid rgb(11, 0, 128) !important;
-
-  /* .p{
-
-  } */
 }
 
 #form-container{
@@ -347,4 +344,12 @@ form button[type="submit"]:hover {
 
 .card-detail{
   border-radius: 10px;
+}
+
+.card-list{
+  margin: 60px 0px;
+}
+
+.card-partner{
+  padding: 20px;
 }

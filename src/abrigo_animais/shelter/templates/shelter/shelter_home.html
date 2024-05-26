@@ -8,15 +8,12 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="{% static 'core/img/cachorro1.jpg' %}" class="d-block w-100" alt="...">
-            <!-- <img src=".." class="d-block w-100" alt="..."> -->
         </div>
         <div class="carousel-item">
             <img src="{% static 'core/img/cachorro2.jpg' %}" class="d-block w-100" alt="...">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
         </div>
         <div class="carousel-item">
             <img src="{% static 'core/img/cachorro3.jpg' %}" class="d-block w-100" alt="...">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -38,9 +35,7 @@
                     style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h2 class="fw-normal">Animais para Adoção</h2>
-            <!-- <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p> -->
             <p>
-                <!-- <a class="nav-link active" aria-current="page" href="{% url 'shelter:list_animals' %}">Animais Disponíveis</a> -->
                 <a class="btn btn-secondary card-link" href="{% url 'shelter:list_animals' %}">Saiba mais &raquo;</a></p>
         </div>
         <div class="col-lg-4">
@@ -49,17 +44,16 @@
                     style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <h2 class="fw-normal">Parceiros</h2>
-            <!-- <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p> -->
-            <p><a class="btn btn-secondary card-link" href="% url 'shelter:list_animals' %">Saiba mais &raquo;</a></p>
+            <p>
+                <a class="btn btn-secondary card-link" href="{% url 'shelter:list_partners' %}">Saiba mais &raquo;</a></p>
         </div>
         <div class="col-lg-4">
             <div style="width: 140px; height: 140px; background: var(--bs-secondary-color);" class="rounded-circle">
                 <img src="{% static 'core/img/racao.jpg' %}" alt="..." class="rounded-circle"
                     style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <h2 class="fw-normal">Doações</h2>
-            <!-- <p>And lastly this, the third column of representative placeholder content.</p> -->
-            <p><a class="btn btn-secondary card-link" href="% url 'shelter:list_animals' %">Saiba mais &raquo;</a></p>
+            <h2 class="fw-normal">Abrigos</h2>
+            <p><a class="btn btn-secondary card-link" href="{% url 'shelter:list_shelters' %}">Saiba mais &raquo;</a></p>
         </div>
     </div>
 
@@ -72,12 +66,14 @@
             </div>
                     </div>
         <div class="col-md-5 order-md-1">
-            <h2 class="featurette-heading fw-normal lh-1">Como surgimos: <span class="text-body-secondary">See for yourself.</span></h2>
+            <h2 class="featurette-heading fw-normal lh-1">Como surgimos: </h2>
             <p class="lead">O projeto Housing Animals é uma iniciativa inspiradora que teve origem em São Paulo, no ano de 2018. Sob a coordenação da dedicada protetora Maria Santos, que já tinha um abrigo anteriormente, mas com um espaço limitado para apenas 20 animais. Diante da crescente demanda e da necessidade de expandir sua capacidade de acolhimento, Maria decidiu dar um passo adiante e fundar o Housing Animals.</p>
 
-            <p class="lead">Com uma visão de oferecer um ambiente seguro e acolhedor para o maior número possível de animais desabrigados, o Housing Animals foi concebido com a missão de ampliar sua capacidade de acolhimento e estabelecer parcerias com outros abrigos e organizações protetoras de animais.</p>
+            <br>
                 
-            <p class="lead">O novo abrigo foi projetado para proporcionar um lar temporário para animais em situação de vulnerabilidade, oferecendo-lhes cuidados médicos, alimentação adequada, abrigo confortável e, acima de tudo, muito amor e atenção. Maria e sua equipe trabalharam incansavelmente para transformar o sonho do Housing Animals em realidade, mobilizando voluntários, arrecadando doações e estabelecendo parcerias com veterinários e outros profissionais dedicados ao bem-estar animal.</p>
+            <p class="lead">O novo abrigo foi projetado para proporcionar um lar temporário para
+                 animais em situação de vulnerabilidade, oferecendo-lhes cuidados médicos, 
+                 alimentação adequada, abrigo confortável e, acima de tudo, muito amor e atenção. Maria e sua equipe trabalharam incansavelmente para transformar o sonho do Housing Animals em realidade, mobilizando voluntários, arrecadando doações e estabelecendo parcerias com veterinários e outros profissionais dedicados ao bem-estar animal.</p>
                 
         </div>
     </div>
@@ -87,7 +83,12 @@
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading fw-normal lh-1">Nossa missão: </h2>
-            <p class="lead">Buscamos mudar o destino dos animais abandonados e rejeitados, encaminhando-os para adoção. Mas sabemos que nem sempre os finais felizes acontecem. Por isso, nos dedicamos a proporcionar conforto, alegria e dignidade para aqueles que talvez nunca encontrem uma família. Em nosso abrigo, os animais idosos e especiais recebem cuidados especiais, desfrutando de uma rotina repleta de amor, mimos e liberdade. Aqui, eles têm um refúgio seguro e acolhedor, independentemente das circunstâncias que os trouxeram até nós.</p>
+            <p class="lead">Buscamos oferecer um ambiente seguro e acolhedor para o maior 
+                número possível de animais desabrigados, 
+                o Housing Animals foi concebido com a missão de ampliar sua capacidade de 
+                acolhimento e estabelecer parcerias com outros abrigos e organizações protetoras de animais.</p>
+                <br>
+                <p class="lead">   Queremos mudar o destino dos animais abandonados e rejeitados, encaminhando-os para adoção. Mas sabemos que nem sempre os finais felizes acontecem. Por isso, nos dedicamos a proporcionar conforto, alegria e dignidade para aqueles que talvez nunca encontrem uma família. </p>
 
         </div>
         <div class="col-md-5 order-md-1">
